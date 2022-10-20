@@ -1,6 +1,8 @@
-# HACKERS 1995 shaders.
+# Hackers (1995) shaders
 
-This is a shader example insipred by the Acid Burn laptop test scene in cult movie Hackers from 1995.
+See it in action [HERE](https://hackers-1995.netlify.app/).
+
+This is a GLSL shader example insipred by the Acid Burn laptop test scene in cult movie Hackers from 1995.
 
 The code is based on [three.js journey](https://threejs-journey.com/) tutorials by Bruno Simone.
 
