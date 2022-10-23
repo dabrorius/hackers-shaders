@@ -48,7 +48,7 @@ float cnoise(vec2 P)
     return 2.3 * n_xy;
 }
 
-
+// Generates a mask for a wavy pattern 
 float wavePattern(vec2 waveUv, float tickness, float radius) {
     float result = 1.0 - step(tickness, abs(distance(waveUv, vec2(0.5)) - radius));
     return result;
@@ -62,7 +62,6 @@ void main()
         floor(vUv.x * gridCellCount) / gridCellCount,
         floor(vUv.y * gridCellCount) / gridCellCount
     );
-    // float bgStrength = cnoise(grid * 10.0 + elapsed) / 2.0 + 0.2;
     float bgStrength = step(0.2, cnoise(grid * 10.0 + elapsed) / 2.0 + 0.2) / 2.0 + 0.1;
     vec3 backgroundColor = vec3(bgStrength);
 
@@ -90,5 +89,4 @@ void main()
     vec3 mixColor = mix(backgroundColor, foregroundColor, foregroundStrength);
 
     gl_FragColor = vec4(mixColor, 1.0);
-
 }
